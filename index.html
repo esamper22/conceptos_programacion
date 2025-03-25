@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guía completa de programación para principiantes. Aprende desde cero los fundamentos de la programación, Python y más.">
+  <title>Guía Completa de Programación para Principiantes</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Prism CSS para resaltado de código -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="76">
+
+  <!-- Botón volver arriba -->
+  <div id="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top animate__animated animate__fadeInDown">
+    <div class="container">
+      <a class="navbar-brand" href="#">Guía de Programación</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#hero">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#introduccion">Introducción</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#historia">Historia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#comunicacion">Comunicación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#python">Python</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#datos">Datos & Variables</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#estructuras">Estructuras de Datos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#funciones">Funciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#condicionales">Condicionales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#recursos">Recursos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 animate__animated animate__fadeInLeft">
+          <h1 class="hero-title">Aprende a Programar desde Cero</h1>
+          <p class="hero-subtitle">Domina los fundamentos de la programación y comienza tu viaje en el mundo del
+            desarrollo de software</p>
+          <div class="d-flex gap-3">
+            <a href="#introduccion" class="btn btn-light btn-lg">Comenzar Ahora</a>
+            <a href="#recursos" class="btn btn-outline-light btn-lg">Recursos</a>
+          </div>
+        </div>
+        <div class="col-lg-6 animate__animated animate__fadeInRight d-none d-lg-block">
+          <div class="code-example">
+            <div class="code-header">
+              <div class="code-dots">
+                <div class="code-dot code-dot-red"></div>
+                <div class="code-dot code-dot-yellow"></div>
+                <div class="code-dot code-dot-green"></div>
+              </div>
+              <div class="code-title">hello_world.py</div>
+            </div>
+            <div class="code-content">
+              <pre><code class="language-python">def saludar(nombre):
+    """Función que saluda al usuario"""
+    return f"¡Hola, {nombre}! Bienvenido al mundo de la programación."
+
+# Solicitar nombre al usuario
+nombre_usuario = input("¿Cómo te llamas? ")
+
+# Mostrar saludo personalizado
+mensaje = saludar(nombre_usuario)
+print(mensaje)
+
+# Mostrar información adicional
+print("\nEstás a punto de comenzar un viaje fascinante.")
+print("La programación te permite crear, innovar y resolver problemas.")
+print("¡Vamos a aprender juntos!")</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Sección: Introducción a la Programación -->
+    <section id="introduccion" class="animate__animated animate__fadeInUp">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title text-center">¿Qué es la Programación?</h2>
+          <p>
+            La programación es el proceso mediante el cual se crean instrucciones que permiten a una computadora
+            resolver problemas, automatizar tareas o procesar información de manera sistemática. Es una disciplina que
+            combina la lógica, la creatividad y el conocimiento técnico para transformar ideas en soluciones
+            ejecutables.
+          </p>
+          <p>
+            Los lenguajes de programación son herramientas esenciales en este proceso, ya que proporcionan la sintaxis y
+            las estructuras necesarias para traducir conceptos humanos a instrucciones comprensibles por las máquinas.
+          </p>
+
+          <div class="row mt-5">
+            <div class="col-md-4 text-center mb-4">
+              <div class="feature-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h4>Pensamiento Lógico</h4>
+              <p>Desarrolla habilidades para resolver problemas de manera estructurada y eficiente.</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+              <div class="feature-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h4>Automatización</h4>
+              <p>Crea sistemas que realizan tareas repetitivas sin intervención humana constante.</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+              <div class="feature-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h4>Creatividad</h4>
+              <p>Transforma ideas innovadoras en aplicaciones y soluciones funcionales.</p>
+            </div>
+          </div>
+
+          <div class="card mt-4">
+            <div class="card-header">
+              <h5 class="mb-0">¿Por qué aprender a programar?</h5>
+            </div>
+            <div class="card-body">
+              <p>Aprender a programar ofrece numerosos beneficios:</p>
+              <ul>
+                <li><strong>Demanda laboral:</strong> Los profesionales de la programación son altamente solicitados en el mercado laboral actual.</li>
+                <li><strong>Resolución de problemas:</strong> Desarrolla habilidades analíticas aplicables a diversos ámbitos de la vida.</li>
+                <li><strong>Autonomía digital:</strong> Te permite crear tus propias soluciones tecnológicas sin depender de terceros.</li>
+                <li><strong>Versatilidad:</strong> Puedes aplicar la programación en campos tan diversos como la ciencia, el arte, los negocios o la educación.</li>
+                <li><strong>Comunidad global:</strong> Te conecta con una comunidad mundial de desarrolladores dispuestos a compartir conocimiento.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Historia de la Programación -->
+    <section id="historia" class="animate__animated animate__fadeInUp">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title text-center">Historia de la Programación</h2>
+          <p>
+            La historia de la programación se inicia con los primeros algoritmos escritos para calcular tablas
+            matemáticas y se extiende a la creación de máquinas mecánicas que seguían instrucciones preestablecidas. Con
+            la invención de las computadoras electrónicas, se desarrollaron los primeros lenguajes de bajo nivel, como
+            el ensamblador, que permitían controlar directamente el hardware.
+          </p>
+          <p>
+            Con el paso del tiempo, se crearon lenguajes de alto nivel, diseñados para simplificar el proceso de
+            programación. Estos lenguajes facilitan la escritura de código legible y mantenible, haciendo posible que un
+            mayor número de personas se adentraran en el mundo de la informática y permitieran la revolución digital que
+            vivimos hoy.
+          </p>
+
+          <div class="timeline mt-5">
+            <div class="timeline-item">
+              <div class="timeline-date">1843</div>
+              <h5>Ada Lovelace</h5>
+              <p>Considerada la primera programadora de la historia, Ada Lovelace escribió el primer algoritmo destinado a ser procesado por una máquina, la Máquina Analítica de Charles Babbage.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">1936</div>
+              <h5>Máquina de Turing</h5>
+              <p>Alan Turing propone un modelo teórico de computación que establece las bases de la informática moderna.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">1945-1957</div>
+              <h5>Primeros Lenguajes</h5>
+              <p>Desarrollo de los primeros lenguajes de programación como Plankalkül, Fortran y COBOL, que permitían escribir instrucciones en un formato más cercano al lenguaje humano.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">1970s</div>
+              <h5>Era de los Lenguajes Estructurados</h5>
+              <p>Surgimiento de lenguajes como C, que introdujeron conceptos de programación estructurada y permitieron el desarrollo de sistemas operativos como UNIX.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">1980s-1990s</div>
+              <h5>Programación Orientada a Objetos</h5>
+              <p>Popularización de lenguajes como C++ y Java, que implementaron el paradigma de programación orientada a objetos, facilitando el desarrollo de aplicaciones complejas.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2000s-Presente</div>
+              <h5>Era de la Web y la IA</h5>
+              <p>Auge de lenguajes como Python, JavaScript y frameworks web, junto con el desarrollo de herramientas para inteligencia artificial y aprendizaje automático.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Comunicación entre Humano, Lenguaje y Máquina -->
+    <section id="comunicacion" class="animate__animated animate__fadeInUp">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title text-center">Comunicación entre Humano, Lenguaje y Máquina</h2>
+          <p>
+            En el ámbito de la programación, la comunicación se establece en tres niveles interrelacionados:
+          </p>
+
+          <div class="row mt-4">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <div class="card-header text-center">
+                  <i class="fas fa-user fa-2x mb-2"></i>
+                  <h5>Humano</h5>
+                </div>
+                <div class="card-body">
+                  <p>El desarrollador o programador que diseña y escribe el código, aportando creatividad, lógica y conocimiento del problema a resolver.</p>
+                  <p>El humano piensa en términos de soluciones abstractas y necesita traducir estas ideas a instrucciones concretas.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <div class="card-header text-center">
+                  <i class="fas fa-code fa-2x mb-2"></i>
+                  <h5>Lenguaje</h5>
+                </div>
+                <div class="card-body">
+                  <p>El medio de expresión, es decir, el lenguaje de programación, que traduce ideas y procesos en instrucciones lógicas.</p>
+                  <p>Cada lenguaje tiene su propia sintaxis, reglas y paradigmas que determinan cómo se expresan las soluciones.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <div class="card-header text-center">
+                  <i class="fas fa-microchip fa-2x mb-2"></i>
+                  <h5>Máquina</h5>
+                </div>
+                <div class="card-body">
+                  <p>El hardware que interpreta y ejecuta las instrucciones, transformando datos en resultados tangibles.</p>
+                  <p>La máquina solo entiende código binario (0s y 1s), por lo que todo lenguaje debe ser traducido eventualmente a este nivel.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <h4>El Proceso de Comunicación</h4>
+            <p>
+              Este proceso integral, que abarca la entrada de datos, el procesamiento de la información y la salida de
+              resultados, es fundamental para entender cómo las ideas se convierten en acciones concretas en el mundo
+              digital.
+            </p>
+
+            <div class="code-example mt-4">
+              <div class="code-header">
+                <div class="code-dots">
+                  <div class="code-dot code-dot-red"></div>
+                  <div class="code-dot code-dot-yellow"></div>
+                  <div class="code-dot code-dot-green"></div>
+                </div>
+                <div class="code-title">comunicacion.py</div>
+              </div>
+              <div class="code-content">
+                <pre><code class="language-python"># 1. HUMANO: Piensa en calcular el área de un círculo
+# 2. LENGUAJE: Traduce la idea a código Python
+
+import math
+
+def calcular_area_circulo(radio):
+    """
+    Calcula el área de un círculo dado su radio.
+    Fórmula: A = π * r²
+    """
+    return math.pi * radio ** 2
+
+# Entrada de datos
+radio = float(input("Ingrese el radio del círculo: "))
+
+# Procesamiento
+area = calcular_area_circulo(radio)
+
+# Salida de resultados
+print(f"El área del círculo con radio {radio} es: {area:.2f} unidades cuadradas")
+
+# 3. MÁQUINA: Ejecuta las instrucciones y muestra el resultado</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Python: Evolución e Historia -->
+    <section id="python" class="animate__animated animate__fadeInUp">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title text-center">Python: Evolución e Historia</h2>
+          <p>
+            Python es un lenguaje de programación de alto nivel que se destaca por su sintaxis clara, su facilidad de
+            aprendizaje y su gran versatilidad. Desde su creación, Python se ha orientado a simplificar el proceso de
+            desarrollo, permitiendo a los programadores centrarse en la lógica y el diseño sin complicarse con detalles
+            innecesarios.
+          </p>
+          <p>
+            A lo largo de los años, Python ha evolucionado y se ha adaptado a las demandas tecnológicas actuales. Con
+            una comunidad muy activa, se han lanzado diversas versiones; la versión <strong>3.13</strong> es la última
+            en uso, integrando mejoras en rendimiento, funcionalidades y legibilidad, lo que la hace ideal tanto para
+            principiantes como para expertos.
+          </p>
+
+          <div class="row mt-5">
+            <div class="col-md-6">
+              <h4>Historia de Python</h4>
+              <ul class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-date">1989</div>
+                  <p>Guido van Rossum comienza a trabajar en Python como un proyecto de pasatiempo durante las vacaciones de Navidad.</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-date">1991</div>
+                  <p>Primera versión pública de Python (0.9.0) lanzada, ya incluyendo clases con herencia, manejo de excepciones y funciones.</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-date">2000</div>
+                  <p>Lanzamiento de Python 2.0 con nuevas características como comprensiones de listas y recolección de basura con conteo de referencias.</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-date">2008</div>
+                  <p>Lanzamiento de Python 3.0, una revisión importante del lenguaje que no es totalmente compatible con versiones anteriores.</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-date">2019</div>
+                  <p>Fin del soporte para Python 2, marcando la transición completa a Python 3.</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-date">Actualidad</div>
+                  <p>Python se ha convertido en uno de los lenguajes más populares, especialmente en áreas como ciencia de datos, IA, desarrollo web y automatización.</p>
+                </div>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h4>Características de Python</h4>
+              <div class="card">
+                <div class="card-body">
+                  <ul>
+                    <li><strong>Sintaxis clara y legible:</strong> Diseñado para ser fácil de leer y escribir, con una sintaxis que enfatiza la legibilidad.</li>
+                    <li><strong>Interpretado:</strong> No necesita ser compilado antes de ejecutarse, lo que facilita las pruebas y el desarrollo.</li>
+                    <li><strong>Multiplataforma:</strong> Funciona en diversos sistemas operativos como Windows, macOS y Linux.</li>
+                    <li><strong>Tipado dinámico:</strong> No es necesario declarar el tipo de las variables, lo que agiliza el desarrollo.</li>
+                    <li><strong>Orientado a objetos:</strong> Soporta programación orientada a objetos, pero también otros paradigmas.</li>
+                    <li><strong>Gran biblioteca estándar:</strong> Incluye módulos y paquetes para diversas tareas comunes.</li>
+                    <li><strong>Extensible:</strong> Se puede integrar con código C/C++ para optimizar partes críticas.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h4 class="mt-4">Áreas de aplicación</h4>
+              <div class="progress mb-3">
+                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Ciencia de Datos (90%)</div>
+              </div>
+              <div class="progress mb-3">
+                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Inteligencia Artificial (85%)</div>
+              </div>
+              <div class="progress mb-3">
+                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Desarrollo Web (80%)</div>
+              </div>
+              <div class="progress mb-3">
+                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Automatización (75%)</div>
+              </div>
+              <div class="progress mb-3">
+                <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Desarrollo de Juegos (70%)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Datos, Variables y Sintaxis en Python -->
+    <section id="datos" class="animate__animated animate__fadeInUp">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title text-center">Datos, Variables y Sintaxis en Python</h2>
+          <p>
+            En cualquier lenguaje de programación, la manipulación de datos es la piedra angular de cualquier
+            aplicación. En Python, los datos se dividen en dos categorías fundamentales:
+          </p>
+
+          <div class="row mt-4">
+            <div class="col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-header">
+                  <h5>Tipos Primitivos</h5>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li><strong>int:</strong> Números enteros (1, 100, -10)</li>
+                    <li><strong>float:</strong> Números decimales (3.14, -0.5)</li>
+                    <li><strong>str:</strong> Cadenas de texto ("Hola", 'Python')</li>
+                    <li><strong>bool:</strong> Valores booleanos (True, False)</li>
+                    <li><strong>None:</strong> Representa la ausencia de valor</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-header">
+                  <h5>Tipos Compuestos</h5>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li><strong>list:</strong> Colecciones ordenadas y mutables [1, 2, 3]</li>
+                    <li><strong>tuple:</strong> Colecciones ordenadas e inmutables (1, 2, 3)</li>
+                    <li><strong>dict:</strong> Diccionarios con pares clave-valor {'a': 1, 'b': 2}</li>
+                    <li><strong>set:</strong> Conjuntos de elementos únicos {1, 2, 3}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="mt-5">Variables en Python</h4>
+          <p>
+            Las <strong>variables</strong> son contenedores que almacenan datos para ser utilizados a lo largo del
+            programa. Python utiliza tipado dinámico, lo que significa que no es necesario declarar el tipo de variable;
+            este se asigna automáticamente según el valor.
+          </p>
+
+          <div class="code-example mt-4">
+            <div class="code-header">
+              <div class="code-dots">
+                <div class="code-dot code-dot-red"></div>
+                <div class="code-dot code-dot-yellow"></div>
+                <div class="code-dot code-dot-green"></div>
+              </div>
+              <div class="code-title">variables.py</div>
+            </div>
+            <div class="code-content">
+              <pre><code class="language-python"># Declaración de variables
+nombre = "Ana"          # Variable tipo string
+edad = 25               # Variable tipo int
+altura = 1.65           # Variable tipo float
+es_estudiante = True    # Variable tipo boolean
+
+# Mostrar información
+print(f"Nombre: {nombre}")
+print(f"Edad: {edad}")
+print(f"Altura: {altura} metros")
+print(f"¿Es estudiante?: {es_estudiante}")
+
+# Verificar tipos de datos
+print(f"\nTipo de 'nombre': {type(nombre)}")
+print(f"Tipo de 'edad': {type(edad)}")
+print(f"Tipo de 'altura': {type(altura)}")
+print(f"Tipo de 'es_estudiante': {type(es_estudiante)}")
+
+# Conversión entre tipos
+edad_texto = str(edad)  # Convertir int a string
+print(f"\nEdad como texto: {edad_texto}, tipo: {type(edad_texto)}")
+
+altura_redondeada = int(altura)  # Convertir float a int (trunca decimales)
+print(f"Altura redondeada: {altura_redondeada}, tipo: {type(altura_redondeada)}")</code></pre>
+            </div>
+          </div>
+
+          <h4 class="mt-5">Sintaxis en Python</h4>
+          <p>
+            La <strong>sintaxis</strong> define el conjunto de reglas que rigen cómo se debe escribir el código. La
+            claridad y legibilidad de Python hacen que su sintaxis sea una de las más accesibles, facilitando el
+            aprendizaje y la escritura de código correcto.
+          </p>
+
+          <div class="card mt-4">
+            <div class="card-header">
+              <h5>Características de la sintaxis de Python</h5>
+            </div>
+            <div class="card-body">
+              <ul>
+                <li><strong>Indentación:</strong> Python utiliza espacios en blanco (generalmente 4 espacios) para definir bloques de código, en lugar de llaves o palabras clave.</li>
+                <li><strong>Comentarios:</strong> Se utilizan # para comentarios de una línea y ''' o """ para comentarios multilínea.</li>
+                <li><strong>Punto y coma:</strong> No es necesario terminar las instrucciones con punto y coma.</li>
+                <li><strong>Case sensitive:</strong> Distingue entre mayúsculas y minúsculas (variable y Variable son diferentes).</li>
+                <li><strong>Palabras clave:</strong> Palabras reservadas como if, for, while, def, class, etc., que tienen un significado especial en el lenguaje.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Estructuras de Datos Compuestos -->
+    <section id="estructuras" class="animate__animated animate__fadeInUp">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title text-center">Estructuras de Datos Compuestos en Python</h2>
+          <p>
+            Las estructuras de datos compuestas permiten agrupar múltiples valores en una sola entidad, facilitando la
+            organización y manipulación de información compleja. Python ofrece varias estructuras de datos
+            fundamentales:
+          </p>
+
+          <ul class="nav nav-tabs mt-5" id="estructurasTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="listas-tab" data-bs-toggle="tab" data-bs-target="#listas" type="button" role="tab" aria-controls="listas" aria-selected="true">Listas</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tuplas-tab" data-bs-toggle="tab" data-bs-target="#tuplas" type="button" role="tab" aria-controls="tuplas" aria-selected="false">Tuplas</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="diccionarios-tab" data-bs-toggle="tab" data-bs-target="#diccionarios" type="button" role="tab" aria-controls="diccionarios" aria-selected="false">Diccionarios</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="conjuntos-tab" data-bs-toggle="tab" data-bs-target="#conjuntos" type="button" role="tab" aria-controls="conjuntos" aria-selected="false">Conjuntos</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="estructurasTabsContent">
+            <div class="tab-pane fade show active" id="listas" role="tabpanel" aria-labelledby="listas-tab">
+              <h4>Listas</h4>
+              <p>Colecciones ordenadas y mutables, ideales para almacenar secuencias de elementos que pueden cambiar a lo largo del tiempo.</p>
+              <div class="code-example mt-3">
+                <div class="code-header">
+                  <div class="code-dots">
+                    <div class="code-dot code-dot-red"></div>
+                    <div class="code-dot code-dot-yellow"></div>
+                    <div class="code-dot code-dot-green"></div>
+                  </div>
+                  <div class="code-title">listas.py</div>
+                </div>
+                <div class="code-content">
+                  <pre><code class="language-python"># Crear una lista
+frutas = ["manzana", "banana", "cereza", "durazno"]
+print(f"Lista de frutas: {frutas}")
+
+# Acceder a elementos
+primera_fruta = frutas[0]  # Índices comienzan en 0
+ultima_fruta = frutas[-1]  # Índices negativos cuentan desde el final
+print(f"Primera fruta: {primera_fruta}")
+print(f"Última fruta: {ultima_fruta}")
+
+# Modificar elementos
+frutas[1] = "pera"
+print(f"Lista modificada: {frutas}")
+
+# Añadir elementos
+frutas.append("uva")        # Añade al final
+print(f"Después de append: {frutas}")
+
+frutas.insert(2, "naranja") # Inserta en posición específica
+print(f"Después de insert: {frutas}")
+
+# Eliminar elementos
+frutas.remove("cereza")     # Elimina por valor
+print(f"Después de remove: {frutas}")
+
+fruta_eliminada = frutas.pop(1)  # Elimina por índice y devuelve el valor
+print(f"Elemento eliminado: {fruta_eliminada}")
+print(f"Después de pop: {frutas}")
+
+# Longitud de la lista
+print(f"Número de frutas: {len(frutas)}")
+
+# Ordenar lista
+frutas.sort()
+print(f"Lista ordenada: {frutas}")
+
+# Invertir lista
+frutas.reverse()
+print(f"Lista invertida: {frutas}")
+
+# Slicing (rebanado)
+primeras_dos = frutas[0:2]  # Desde índice 0 hasta 1 (2 no incluido)
+print(f"Primeras dos frutas: {primeras_dos}")
+
+# Copiar lista
+frutas_copia = frutas.copy()
+print(f"Copia de la lista: {frutas_copia}")</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tuplas" role="tabpanel" aria-labelledby="tuplas-tab">
+              <h4>Tuplas</h4>
+              <p>Colecciones ordenadas pero inmutables, utilizadas para almacenar datos que no deben modificarse.</p>
+              <div class="code-example mt-3">
+                <div class="code-header">
+                  <div class="code-dots">
+                    <div class="code-dot code-dot-red"></div>
+                    <div class="code-dot code-dot-yellow"></div>
+                    <div class="code-dot code-dot-green"></div>
+                  </div>
+                  <div class="code-title">tuplas.py</div>
+                </div>
+                <div class="code-content">
+                  <pre><code class="language-python"># Crear una tupla
+coordenadas = (10, 20)
+print(f"Coordenadas: {coordenadas}")
+
+# Tupla con diferentes tipos de datos
+datos_persona = ("Juan", 30, "Ingeniero", True)
+print(f"Datos de persona: {datos_persona}")
+
+# Acceder a elementos
+nombre = datos_persona[0]
+edad = datos_persona[1]
+print(f"Nombre: {nombre}, Edad: {edad}")
+
+# Intentar modificar una tupla (generará error)
+try:
+    datos_persona[1] = 31
+except TypeError as e:
+    print(f"Error: {e}")
+
+# Desempaquetar tupla
+nombre, edad, profesion, activo = datos_persona
+print(f"Desempaquetado: {nombre}, {edad}, {profesion}, {activo}")
+
+# Tupla de un solo elemento (requiere coma)
+singleton = (42,)
+print(f"Tupla de un elemento: {singleton}, tipo: {type(singleton)}")
+
+# Métodos de tuplas
+print(f"Número de veces que aparece 'Juan': {datos_persona.count('Juan')}")
+print(f"Índice de 'Ingeniero': {datos_persona.index('Ingeniero')}")
+
+# Convertir lista a tupla y viceversa
+lista = list(coordenadas)
+print(f"Tupla convertida a lista: {lista}, tipo: {type(lista)}")
+
+tupla = tuple(lista)
+print(f"Lista convertida a tupla: {tupla}, tipo: {type(tupla)}")</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="diccionarios" role="tabpanel" aria-labelledby="diccionarios-tab">
+              <h4>Diccionarios</h4>
+              <p>Estructuras basadas en pares clave-valor, que permiten un acceso rápido a los elementos mediante una clave única.</p>
+              <div class="code-example mt-3">
+                <div class="code-header">
+                  <div class="code-dots">
+                    <div class="code-dot code-dot-red"></div>
+                    <div class="code-dot code-dot-yellow"></div>
+                    <div class="code-dot code-dot-green"></div>
+                  </div>
+                  <div class="code-title">diccionarios.py</div>
+                </div>
+                <div class="code-content">
+                  <pre><code class="language-python"># Crear un diccionario
+estudiante = {
+    "nombre": "María",
+    "edad": 22,
+    "carrera": "Informática",
+    "promedio": 8.7,
+    "activo": True
+}
+print(f"Diccionario estudiante: {estudiante}")
+
+# Acceder a valores
+nombre = estudiante["nombre"]
+print(f"Nombre: {nombre}")
+
+# Método get (más seguro, permite valor por defecto)
+telefono = estudiante.get("telefono", "No disponible")
+print(f"Teléfono: {telefono}")
+
+# Modificar valores
+estudiante["edad"] = 23
+print(f"Edad actualizada: {estudiante['edad']}")
+
+# Añadir nuevos pares clave-valor
+estudiante["semestre"] = 6
+print(f"Diccionario actualizado: {estudiante}")
+
+# Eliminar pares clave-valor
+del estudiante["activo"]
+print(f"Después de eliminar 'activo': {estudiante}")
+
+valor_eliminado = estudiante.pop("promedio")
+print(f"Valor eliminado: {valor_eliminado}")
+print(f"Después de pop: {estudiante}")
+
+# Verificar si una clave existe
+if "carrera" in estudiante:
+    print(f"La carrera es: {estudiante['carrera']}")
+
+# Obtener todas las claves y valores
+claves = estudiante.keys()
+valores = estudiante.values()
+items = estudiante.items()  # Pares clave-valor como tuplas
+
+print(f"Claves: {list(claves)}")
+print(f"Valores: {list(valores)}")
+print(f"Items: {list(items)}")
+
+# Diccionarios anidados
+universidad = {
+    "nombre": "Universidad Tecnológica",
+    "ubicacion": "Ciudad Central",
+    "estudiantes": {
+        "001": {"nombre": "Ana", "promedio": 9.2},
+        "002": {"nombre": "Carlos", "promedio": 8.5}
+    }
+}
+
+print(f"\nPromedio de Carlos: {universidad['estudiantes']['002']['promedio']}")</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="conjuntos" role="tabpanel" aria-labelledby="conjuntos-tab">
+              <h4>Conjuntos (Sets)</h4>
+              <p>Colecciones de elementos únicos y sin un orden definido, útiles para operaciones matemáticas y de comparación.</p>
+              <div class="code-example mt-3">
+                <div class="code-header">
+                  <div class="code-dots">
+                    <div class="code-dot code-dot-red"></div>
+                    <div class="code-dot code-dot-yellow"></div>
+                    <div class="code-dot code-dot-green"></div>
+                  </div>
+                  <div class="code-title">conjuntos.py</div>
+                </div>
+                <div class="code-content">
+                  <pre><code class="language-python"># Crear un conjunto
+colores = {"rojo", "verde", "azul", "amarillo"}
+print(f"Conjunto de colores: {colores}")
+
+# Los conjuntos no permiten duplicados
+numeros = {1, 2, 3, 2, 1, 4, 5}
+print(f"Conjunto de números (sin duplicados): {numeros}")
+
+# Añadir elementos
+colores.add("morado")
+print(f"Después de añadir 'morado': {colores}")
+
+# Eliminar elementos
+colores.remove("verde")  # Genera error si no existe
+print(f"Después de eliminar 'verde': {colores}")
+
+colores.discard("naranja")  # No genera error si no existe
+print(f"Después de descartar 'naranja': {colores}")
+
+# Operaciones de conjuntos
+conjunto_a = {1, 2, 3, 4, 5}
+conjunto_b = {4, 5, 6, 7, 8}
+
+# Unión
+union = conjunto_a | conjunto_b  # También: conjunto_a.union(conjunto_b)
+print(f"Unión: {union}")
+
+# Intersección
+interseccion = conjunto_a & conjunto_b  # También: conjunto_a.intersection(conjunto_b)
+print(f"Intersección: {interseccion}")
+
+# Diferencia
+diferencia = conjunto_a - conjunto_b  # También: conjunto_a.difference(conjunto_b)
+print(f"Diferencia (A-B): {diferencia}")
+
+# Diferencia simétrica
+dif_simetrica = conjunto_a ^ conjunto_b  # También: conjunto_a.symmetric_difference(conjunto_b)
+print(f"Diferencia simétrica: {dif_simetrica}")
+
+# Verificar subconjuntos
+conjunto_c = {1, 2}
+es_subconjunto = conjunto_c.issubset(conjunto_a)
+print(f"¿C es subconjunto de A?: {es_subconjunto}")
+
+# Verificar superconjuntos
+es_superconjunto = conjunto_a.issuperset(conjunto_c)
+print(f"¿A es superconjunto de C?: {es_superconjunto}")</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="mt-5">Técnicas Avanzadas: Slicing</h4>
+          <p>
+            El <strong>slicing</strong> (rebanado) es una técnica poderosa para extraer sub-secuencias de listas, tuplas o cadenas utilizando índices. La sintaxis general es <code>[inicio:fin:paso]</code>, donde:
+          </p>
+          <ul>
+            <li><strong>inicio:</strong> Índice donde comienza la extracción (incluido)</li>
+            <li><strong>fin:</strong> Índice donde termina la extracción (no incluido)</li>
+            <li><strong>paso:</strong> Incremento entre elementos (opcional, por defecto es 1)</li>
+          </ul>
+
+          <div class="code-example mt-4">
+            <div class="code-header">
+              <div class="code-dots">
+                <div class="code-dot code-dot-red"></div>
+                <div class="code-dot code-dot-yellow"></div>
+                <div class="code-dot code-dot-green"></div>
+              </div>
+              <div class="code-title">slicing.py</div>
+            </div>
+            <div class="code-content">
+              <pre><code class="language-python">numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Slicing básico
+print(f"Primeros 3 elementos: {numeros[0:3]}")  # [0, 1, 2]
+print(f"Elementos del 4 al 7: {numeros[4:8]}")  # [4, 5, 6, 7]
+
+# Omitir inicio o fin
+print(f"Hasta el índice 5: {numeros[:6]}")      # [0, 1, 2, 3, 4, 5]
+print(f"Desde el índice 7: {numeros[7:]}")      # [7, 8, 9]
+
+# Índices negativos
+print(f"Últimos 3 elementos: {numeros[-3:]}")   # [7, 8, 9]
+print(f"Todo excepto los últimos 2: {numeros[:-2]}")  # [0, 1, 2, 3, 4, 5, 6, 7]
+
+# Usando paso
+print(f"Elementos pares: {numeros[::2]}")       # [0, 2, 4, 6, 8]
+print(f"Elementos impares: {numeros[1::2]}")    # [1, 3, 5, 7, 9]
+
+# Paso negativo (invierte el orden)
+print(f"Lista invertida: {numeros[::-1]}")      # [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+print(f"Cada 3 elementos en reversa: {numeros[::-3]}")  # [9, 6, 3, 0]
+
+# Slicing en cadenas
+texto = "Python es genial"
+print(f"Primeras 6 letras: '{texto[:6]}'")      # 'Python'
+print(f"Invertir texto: '{texto[::-1]}'")       # 'laineg se nohtyP'</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Funciones y CRUD en Python -->
+    <section id="funciones" class="animate__animated animate__fadeInUp">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title text-center">Funciones y Operaciones CRUD en Python</h2>
+          <p>
+            Las <strong>funciones</strong> son bloques de código reutilizables que encapsulan una tarea o proceso
+            específico. Se pueden comparar a una máquina expendedora: al introducir una moneda (entrada), la máquina
+            procesa la solicitud y te entrega el producto (salida). Este concepto facilita la modularidad y el
+            mantenimiento del código.
+          </p>
+
+          <div class="row mt-5">
+            <div class="col-md-6">
+              <h4>Anatomía de una Función</h4>
+              <div class="code-example mt-3">
+                <div class="code-header">
+                  <div class="code-dots">
+                    <div class="code-dot code-dot-red"></div>
+                    <div class="code-dot code-dot-yellow"></div>
+                    <div class="code-dot code-dot-green"></div>
+                  </div>
+                  <div class="code-title">funcion_basica.py</div>
+                </div>
+                <div class="code-content">
+                  <pre><code class="language-python">def saludar(nombre):
+    """
+    Esta función saluda a la persona especificada.
+    
+    Args:
+        nombre (str): El nombre de la persona a saludar
+        
+    Returns:
+        str: Un mensaje de saludo personalizado
+    """
+    return f"¡Hola, {nombre}! Bienvenido/a."
+
+# Llamar a la función
+mensaje = saludar("Laura")
+print(mensaje)  # Imprime: ¡Hola, Laura! Bienvenido/a.</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h4>Componentes de una Función</h4>
+              <div class="card">
+                <div class="card-body">
+                  <ul>
+                    <li><strong>Definición:</strong> Comienza con la palabra clave <code>def</code> seguida del nombre de la función.</li>
+                    <li><strong>Parámetros:</strong> Variables que recibe la función (opcionales).</li>
+                    <li><strong>Docstring:</strong> Documentación de la función (opcional pero recomendado).</li>
+                    <li><strong>Cuerpo:</strong> Código que se ejecuta cuando se llama a la función.</li>
+                    <li><strong>Return:</strong> Valor que devuelve la función (opcional).</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="mt-5">Tipos de Funciones</h4>
+          <div class="accordion mt-3" id="accordionFunciones">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Funciones sin parámetros
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFunciones">
+                <div class="accordion-body">
+                  <p>Funciones que no reciben ningún valor y realizan una tarea específica.</p>
+                  <pre><code class="language-python">def mostrar_fecha():
+    import datetime
+    fecha_actual = datetime.datetime.now()
+    return f"Fecha actual: {fecha_actual.strftime('%d/%m/%Y')}"
+
+print(mostrar_fecha())</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Funciones con parámetros
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFunciones">
+                <div class="accordion-body">
+                  <p>Funciones que reciben uno o más valores para procesar.</p>
+                  <pre><code class="language-python">def calcular_area_rectangulo(base, altura):
+    """Calcula el área de un rectángulo."""
+    return base * altura
+
+area = calcular_area_rectangulo(5, 3)
+print(f"El área del rectángulo es: {area}")</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Funciones con parámetros por defecto
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFunciones">
+                <div class="accordion-body">
+                  <p>Funciones que tienen valores predeterminados para algunos o todos sus parámetros.</p>
+                  <pre><code class="language-python">def saludar(nombre, mensaje="¡Bienvenido a Python!"):
+    """Saluda a una persona con un mensaje personalizado o predeterminado."""
+    return f"Hola {nombre}. {mensaje}"
+
+# Usando el valor por defecto
+print(saludar("Carlos"))  # Imprime: Hola Carlos. ¡Bienvenido a Python!
+
+# Proporcionando un mensaje personalizado
+print(saludar("Ana", "¡Feliz aprendizaje!"))</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Funciones con número variable de argumentos
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFunciones">
+                <div class="accordion-body">
+                  <p>Funciones que pueden recibir un número indeterminado de argumentos.</p>
+                  <pre><code class="language-python">def sumar(*numeros):
+    """Suma todos los números proporcionados."""
+    total = 0
+    for numero in numeros:
+        total += numero
+    return total
+
+# Llamadas con diferente número de argumentos
+print(sumar(1, 2))          # Imprime: 3
+print(sumar(1, 2, 3, 4, 5)) # Imprime: 15</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Funciones lambda (anónimas)
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionFunciones">
+                <div class="accordion-body">
+                  <p>Funciones pequeñas y anónimas definidas en una sola línea.</p>
+                  <pre><code class="language-python"># Función lambda para duplicar un número
+duplicar = lambda x: x * 2
+print(duplicar(5))  # Imprime: 10
+
+# Uso con funciones de orden superior
+numeros = [1, 2, 3, 4, 5]
+cuadrados = list(map(lambda x: x**2, numeros))
+print(cuadrados)  # Imprime: [1, 4, 9, 16, 25]</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="mt-5">Operaciones CRUD en Python</h4>
+          <p>
+            Las operaciones CRUD (Crear, Leer, Actualizar y Eliminar) son esenciales para el manejo de datos, ya que
+            permiten gestionar la información de manera sistemática, tanto en estructuras de datos en memoria como en
+            bases de datos.
+          </p>
+
+          <div class="code-example mt-4">
+            <div class="code-header">
+              <div class="code-dots">
+                <div class="code-dot code-dot-red"></div>
+                <div class="code-dot code-dot-yellow"></div>
+                <div class="code-dot code-dot-green"></div>
+              </div>
+              <div class="code-title">crud_ejemplo.py</div>
+            </div>
+            <div class="code-content">
+              <pre><code class="language-python"># Ejemplo de operaciones CRUD con una lista de estudiantes
+
+# Lista para almacenar estudiantes (simulando una base de datos)
+estudiantes = []
+
+def crear_estudiante(id, nombre, edad, carrera):
+    """
+    Crea un nuevo estudiante y lo añade a la lista.
+    
+    Args:
+        id (int): Identificador único del estudiante
+        nombre (str): Nombre completo del estudiante
+        edad (int): Edad del estudiante
+        carrera (str): Carrera que estudia
+        
+    Returns:
+        dict: El estudiante creado
+    """
+    estudiante = {
+        "id": id,
+        "nombre": nombre,
+        "edad": edad,
+        "carrera": carrera
+    }
+    estudiantes.append(estudiante)
+    return estudiante
+
+def leer_estudiante(id):
+    """
+    Busca y devuelve un estudiante por su ID.
+    
+    Args:
+        id (int): ID del estudiante a buscar
+        
+    Returns:
+        dict: Estudiante encontrado o None si no existe
+    """
+    for estudiante in estudiantes:
+        if estudiante["id"] == id:
+            return estudiante
+    return None
+
+def leer_todos_estudiantes():
+    """
+    Devuelve todos los estudiantes.
+    
+    Returns:
+        list: Lista de todos los estudiantes
+    """
+    return estudiantes
+
+def actualizar_estudiante(id, datos):
+    """
+    Actualiza los datos de un estudiante existente.
+    
+    Args:
+        id (int): ID del estudiante a actualizar
+        datos (dict): Diccionario con los campos a actualizar
+        
+    Returns:
+        dict: Estudiante actualizado o None si no existe
+    """
+    estudiante = leer_estudiante(id)
+    if estudiante:
+        for clave, valor in datos.items():
+            if clave in estudiante and clave != "id":  # No permitir cambiar el ID
+                estudiante[clave] = valor
+        return estudiante
+    return None
+
+def eliminar_estudiante(id):
+    """
+    Elimina un estudiante de la lista.
+    
+    Args:
+        id (int): ID del estudiante a eliminar
+        
+    Returns:
+        bool: True si se eliminó correctamente, False si no existe
+    """
+    estudiante = leer_estudiante(id)
+    if estudiante:
+        estudiantes.remove(estudiante)
+        return True
+    return False
+
+# Ejemplo de uso
+
+# Crear estudiantes (Create)
+crear_estudiante(1, "Ana García", 20, "Informática")
+crear_estudiante(2, "Carlos López", 22, "Ingeniería")
+crear_estudiante(3, "María Rodríguez", 19, "Medicina")
+
+# Leer estudiantes (Read)
+print("Todos los estudiantes:")
+for e in leer_todos_estudiantes():
+    print(f"ID: {e['id']}, Nombre: {e['nombre']}, Edad: {e['edad']}, Carrera: {e['carrera']}")
+
+# Buscar un estudiante específico
+estudiante = leer_estudiante(2)
+if estudiante:
+    print(f"\nEstudiante encontrado: {estudiante['nombre']}")
+
+# Actualizar estudiante (Update)
+actualizar_estudiante(1, {"edad": 21, "carrera": "Ciencias de la Computación"})
+print("\nDespués de actualizar:")
+print(leer_estudiante(1))
+
+# Eliminar estudiante (Delete)
+eliminar_estudiante(3)
+print("\nDespués de eliminar a María:")
+for e in leer_todos_estudiantes():
+    print(f"ID: {e['id']}, Nombre: {e['nombre']}")</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Condicionales y Slicing Avanzado -->
+    <section id="condicionales" class="animate__animated animate__fadeInUp">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title text-center">Condicionales y Control de Flujo</h2>
+          <p>
+            Las estructuras condicionales permiten que el código tome decisiones basadas en la evaluación de expresiones
+            lógicas. En Python, se utilizan las sentencias <code>if</code>, <code>elif</code> y <code>else</code> para
+            controlar el flujo de ejecución, mientras que la sentencia <code>match</code> (introducida recientemente)
+            facilita la coincidencia de patrones.
+          </p>
+
+          <div class="row mt-5">
+            <div class="col-md-6">
+              <h4>Estructura if-elif-else</h4>
+              <div class="code-example mt-3">
+                <div class="code-header">
+                  <div class="code-dots">
+                    <div class="code-dot code-dot-red"></div>
+                    <div class="code-dot code-dot-yellow"></div>
+                    <div class="code-dot code-dot-green"></div>
+                  </div>
+                  <div class="code-title">condicionales.py</div>
+                </div>
+                <div class="code-content">
+                  <pre><code class="language-python"># Ejemplo de estructura if-elif-else
+edad = 25
+
+if edad < 18:
+    print("Eres menor de edad")
+elif edad >= 18 and edad < 65:
+    print("Eres adulto")
+else:
+    print("Eres adulto mayor")
+
+# Condicionales anidados
+puntuacion = 85
+
+if puntuacion >= 60:
+    print("Aprobado")
+    if puntuacion >= 90:
+        print("Excelente")
+    elif puntuacion >= 80:
+        print("Muy bien")
+    else:
+        print("Bien")
+else:
+    print("Reprobado")
+
+# Operador ternario
+mensaje = "Puede votar" if edad >= 18 else "No puede votar"
+print(mensaje)</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h4>Estructura match-case (Python 3.10+)</h4>
+              <div class="code-example mt-3">
+                <div class="code-header">
+                  <div class="code-dots">
+                    <div class="code-dot code-dot-red"></div>
+                    <div class="code-dot code-dot-yellow"></div>
+                    <div class="code-dot code-dot-green"></div>
+                  </div>
+                  <div class="code-title">match_case.py</div>
+                </div>
+                <div class="code-content">
+                  <pre><code class="language-python"># Ejemplo de estructura match-case (Python 3.10+)
+def analizar_comando(comando):
+    match comando.split():
+        case ["salir"]:
+            return "Saliendo del programa..."
+        case ["guardar", nombre]:
+            return f"Guardando archivo como {nombre}"
+        case ["abrir", nombre]:
+            return f"Abriendo archivo {nombre}"
+        case ["ayuda"]:
+            return "Comandos disponibles: salir, guardar, abrir, ayuda"
+        case _:
+            return "Comando no reconocido"
+
+# Ejemplos de uso
+print(analizar_comando("salir"))
+print(analizar_comando("guardar documento.txt"))
+print(analizar_comando("abrir informe.pdf"))
+print(analizar_comando("ayuda"))
+print(analizar_comando("comando desconocido"))</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="mt-5">Bucles y Estructuras de Control</h4>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <h5>Bucle for</h5>
+              <div class="code-example">
+                <div class="code-header">
+                  <div class="code-dots">
+                    <div class="code-dot code-dot-red"></div>
+                    <div class="code-dot code-dot-yellow"></div>
+                    <div class="code-dot code-dot-green"></div>
+                  </div>
+                  <div class="code-title">bucle_for.py</div>
+                </div>
+                <div class="code-content">
+                  <pre><code class="language-python"># Iteración básica
+for i in range(5):
+    print(f"Número: {i}")
+
+# Iteración sobre una lista
+frutas = ["manzana", "banana", "cereza"]
+for fruta in frutas:
+    print(f"Me gusta la {fruta}")
+
+# Iteración con índice usando enumerate
+for indice, fruta in enumerate(frutas):
+    print(f"{indice + 1}. {fruta}")
+
+# Iteración sobre diccionarios
+estudiante = {"nombre": "Juan", "edad": 20, "carrera": "Informática"}
+for clave, valor in estudiante.items():
+    print(f"{clave}: {valor}")
+
+# Comprensión de listas
+cuadrados = [x**2 for x in range(1, 6)]
+print(f"Cuadrados: {cuadrados}")
+
+# Comprensión de listas con condición
+pares = [x for x in range(10) if x % 2 == 0]
+print(f"Números pares: {pares}")</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h5>Bucle while</h5>
+              <div class="code-example">
+                <div class="code-header">
+                  <div class="code-dots">
+                    <div class="code-dot code-dot-red"></div>
+                    <div class="code-dot code-dot-yellow"></div>
+                    <div class="code-dot code-dot-green"></div>
+                  </div>
+                  <div class="code-title">bucle_while.py</div>
+                </div>
+                <div class="code-content">
+                  <pre><code class="language-python"># Bucle while básico
+contador = 0
+while contador < 5:
+    print(f"Contador: {contador}")
+    contador += 1
+
+# Bucle con break
+print("\nEjemplo con break:")
+numero = 0
+while True:
+    if numero >= 5:
+        break  # Sale del bucle
+    print(f"Número: {numero}")
+    numero += 1
+
+# Bucle con continue
+print("\nEjemplo con continue:")
+for i in range(10):
+    if i % 2 == 0:
+        continue  # Salta a la siguiente iteración
+    print(f"Número impar: {i}")
+
+# Bucle con else
+print("\nEjemplo con else:")
+buscar = 7
+numeros = [1, 3, 5, 9]
+
+for num in numeros:
+    if num == buscar:
+        print(f"¡Encontrado {buscar}!")
+        break
+else:
+    # Se ejecuta si el bucle termina normalmente (sin break)
+    print(f"No se encontró {buscar} en la lista")</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="mt-5">Manejo de Excepciones</h4>
+          <p>
+            El manejo de excepciones permite controlar errores durante la ejecución del programa, evitando que se detenga abruptamente y proporcionando mensajes útiles al usuario.
+          </p>
+
+          <div class="code-example mt-3">
+            <div class="code-header">
+              <div class="code-dots">
+                <div class="code-dot code-dot-red"></div>
+                <div class="code-dot code-dot-yellow"></div>
+                <div class="code-dot code-dot-green"></div>
+              </div>
+              <div class="code-title">excepciones.py</div>
+            </div>
+            <div class="code-content">
+              <pre><code class="language-python"># Estructura básica try-except
+try:
+    numero = int(input("Ingrese un número: "))
+    resultado = 10 / numero
+    print(f"El resultado es: {resultado}")
+except ValueError:
+    print("Error: Debe ingresar un número válido")
+except ZeroDivisionError:
+    print("Error: No se puede dividir por cero")
+except Exception as e:
+    print(f"Error inesperado: {e}")
+else:
+    # Se ejecuta si no hay excepciones
+    print("Operación realizada con éxito")
+finally:
+    # Se ejecuta siempre, haya o no excepciones
+    print("Proceso finalizado")
+
+# Lanzar excepciones personalizadas
+def verificar_edad(edad):
+    if edad < 0:
+        raise ValueError("La edad no puede ser negativa")
+    if edad > 120:
+        raise ValueError("La edad parece demasiado alta")
+    return True
+
+try:
+    verificar_edad(150)
+except ValueError as e:
+    print(f"Error de validación: {e}")</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Recursos Adicionales -->
+    <section id="recursos" class="animate__animated animate__fadeInUp">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title text-center">Recursos Adicionales</h2>
+          <p class="text-center">
+            Para continuar tu aprendizaje en programación, aquí tienes una selección de recursos útiles:
+          </p>
+
+          <div class="row mt-5">
+            <div class="col-md-4 mb-4">
+              <div class="card concept-card">
+                <div class="card-body text-center">
+                  <div class="concept-icon">
+                    <i class="fas fa-book"></i>
+                  </div>
+                  <h4>Documentación</h4>
+                  <p>Recursos oficiales y guías de referencia</p>
+                  <ul class="list-unstyled">
+                    <li><a href="https://docs.python.org/es/3/" target="_blank">Documentación oficial de Python</a></li>
+                    <li><a href="https://www.w3schools.com/python/" target="_blank">W3Schools Python</a></li>
+                    <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank">MDN Web Docs (JavaScript)</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card concept-card">
+                <div class="card-body text-center">
+                  <div class="concept-icon">
+                    <i class="fas fa-laptop-code"></i>
+                  </div>
+                  <h4>Cursos Online</h4>
+                  <p>Plataformas de aprendizaje interactivo</p>
+                  <ul class="list-unstyled">
+                    <li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a></li>
+                    <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></li>
+                    <li><a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
+                    <li><a href="https://www.edx.org/" target="_blank">edX</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card concept-card">
+                <div class="card-body text-center">
+                  <div class="concept-icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <h4>Comunidades</h4>
+                  <p>Foros y grupos para resolver dudas</p>
+                  <ul class="list-unstyled">
+                    <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+                    <li><a href="https://www.reddit.com/r/learnprogramming/" target="_blank">Reddit r/learnprogramming</a></li>
+                    <li><a href="https://discord.com/invite/python" target="_blank">Discord de Python</a></li>
+                    <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-6 mb-4">
+              <div class="card concept-card">
+                <div class="card-body text-center">
+                  <div class="concept-icon">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  <h4>Entornos de Práctica</h4>
+                  <p>Plataformas para practicar programación</p>
+                  <ul class="list-unstyled">
+                    <li><a href="https://www.hackerrank.com/" target="_blank">HackerRank</a></li>
+                    <li><a href="https://leetcode.com/" target="_blank">LeetCode</a></li>
+                    <li><a href="https://www.codewars.com/" target="_blank">Codewars</a></li>
+                    <li><a href="https://replit.com/" target="_blank">Replit</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="card concept-card">
+                <div class="card-body text-center">
+                  <div class="concept-icon">
+                    <i class="fas fa-project-diagram"></i>
+                  </div>
+                  <h4>Proyectos Prácticos</h4>
+                  <p>Ideas para aplicar lo aprendido</p>
+                  <ul class="list-unstyled">
+                    <li>Calculadora con interfaz gráfica</li>
+                    <li>Aplicación de gestión de tareas</li>
+                    <li>Juego simple (Ahorcado, Tres en raya)</li>
+                    <li>Analizador de datos con Pandas</li>
+                    <li>Sitio web con Flask o Django</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <h4>¿Listo para comenzar tu viaje en la programación?</h4>
+            <p>Recuerda que la práctica constante es la clave para dominar cualquier lenguaje de programación.</p>
+            <a href="#hero" class="btn btn-primary btn-lg mt-3">Volver al inicio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="animate__animated animate__fadeInUp">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h4 class="footer-title">Guía de Programación</h4>
+          <p>Tu recurso completo para aprender programación desde cero. Explora los fundamentos, conceptos avanzados y mejores prácticas.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h4 class="footer-title">Enlaces Rápidos</h4>
+          <ul class="footer-links">
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#python">Python</a></li>
+            <li><a href="#datos">Datos & Variables</a></li>
+            <li><a href="#estructuras">Estructuras de Datos</a></li>
+            <li><a href="#funciones">Funciones</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h4 class="footer-title">Contacto</h4>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt me-2"></i> Nueva Gerona, Isla de la Juventud, Cuba</li>
+            <li><i class="fas fa-phone-alt me-2"></i> <a href="tel:+5356720773">+53 56720773</a></li>
+            <li><i class="fas fa-envelope me-2"></i> <a href="mailto:sampere0111@gmail.com">sampere0111@gmail.com</a></li>
+            <li><i class="fab fa-telegram me-2"></i> <a href="https://t.me/samperfree" target="_blank">Telegram</a></li>
+            <li><i class="fab fa-whatsapp me-2"></i> <a href="https://wa.me/5356720773" target="_blank">WhatsApp</a></li>
+            <li><i class="fab fa-github me-2"></i> <a href="https://github.com/esamper22" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="mt-4 mb-4" style="background-color: rgba(255,255,255,0.2);">
+      <p class="footer-text text-center">&copy; <span id="year"></span> Guía de Programación. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS y dependencias -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Prism JS para resaltado de código -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <!-- Script para actualizar el año en el footer -->
+  <script src="script.js"></script>
+</body>
+
+</html>
