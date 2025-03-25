@@ -81,9 +81,10 @@ Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENS
 
 ## 📞 Contacto
 
-- **Email**: [info@guiaprogramacion.com](mailto:info@guiaprogramacion.com)
-- **Twitter**: [@GuiaProgramacion](https://twitter.com/GuiaProgramacion)
-- **GitHub**: [github.com/GuiaProgramacion](https://github.com/GuiaProgramacion)
+- **Email**: [sampere0111@gmail.com](mailto:sampere0111@gmail.com)
+- **Telegram**: [Telegram](https://t.me/samperfree)
+- **WhatsApp**: [WhatsApp](https://wa.me/5356720773)
+- **GitHub**: [github.com/esamper22](https://github.com/esamper22)
 
 ---
 
