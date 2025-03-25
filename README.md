@@ -27,8 +27,8 @@ Este proyecto es una guía web diseñada para aprender programación desde cero,
 1. **Clonar el repositorio**:
 
     ```bash
-    git clone https://github.com/usuario/guia-programacion.git
-    cd guia-programacion
+    git clone https://github.com/esamper22/conceptos_programacion.git
+    cd conceptos_programacion
     ```
 
 2. **Abrir el proyecto**:  
@@ -40,14 +40,11 @@ Este proyecto es una guía web diseñada para aprender programación desde cero,
 ## 📂 Estructura del Proyecto
 
 ```plaintext
-guia-programacion/
+conceptos_programacion/
 ├── index.html              # Archivo principal HTML
 ├── README.md               # Documentación del proyecto
-├── css/                    # Estilos CSS
-│   └── styles.css          # Estilos personalizados
-├── js/                     # Scripts JavaScript
-│   └── main.js             # Funcionalidades interactivas
-└── img/                    # Imágenes y recursos gráficos
+├── styles.css              # Estilos personalizados
+├── main.js                 # Funcionalidades interactivas
 ```
 
 ## 📚 Secciones de Contenido
